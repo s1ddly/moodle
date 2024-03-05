@@ -2783,7 +2783,7 @@ function check_max_input_vars(environment_results $result) {
     $max = (int)ini_get('max_input_vars');
     if ($max < 5000) {
         $result->setInfo('max_input_vars');
-        $result->setStatus(false);
+        $result->setStatus(true);
         if (PHP_VERSION_ID >= 80000) {
             // For PHP8 this check is required.
             $result->setLevel('required');
